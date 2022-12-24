@@ -3,12 +3,11 @@ set t_Co=256
 set term=screen-256color
 set cursorline
 colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
-" if exists('+termguicolors')
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
-" endif
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
 syntax on
 
 :set nu
@@ -17,6 +16,8 @@ syntax on
 :set incsearch
 :set expandtab
 :set tabstop=4
+:set mouse=a
+:set hlsearch
 " Change leader to space
 let mapleader = " "
 nnoremap <SPACE> <Nop>
