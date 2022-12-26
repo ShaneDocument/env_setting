@@ -12,14 +12,13 @@ This is a basic setting for vim and others.
 * vim - one-half (dark for default) without Italic font
 * tmux - tmux-power
     * It's necessary to update tmux to latest version
-## Install
+## Quick Install
 
-1. copy .vimrc, .vim,  .tmux.conf, .tmux_theme to $HOME folder
-    * Then NERDTree and buftabline is installed
-2. Install Python and cmake
-3. Add bash_setting to .bashrc or .bash_profile (.bash_profile recommended)
-4. Install YCM
-5. Done!
+1. execute `./install.sh`
+2. If anything goes well, execute `vim` to check if the `vim` in this computer is built with python3.
+    * If vim doesn't support python3, execute './install_vim.py'
+    * Paste bash_setting to .bash_profile or .bashrc
+3. Done!
 
 TODO: Make a script
 

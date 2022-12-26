@@ -30,23 +30,21 @@ Kernel configured for up to 8 processors.
 Processor type: arm64e (ARM64E)
 Processors active: 0 1 2 3 4 5 6 7
 Primary memory available: 8.00 gigabytes
-Default processor set: 317 tasks, 1638 threads, 8 processors
-Load average: 2.92, Mach factor: 5.07
+Default processor set: 251 tasks, 1367 threads, 8 processors
+Load average: 5.41, Mach factor: 2.58
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /Users/shane/Python/bin/
-PATH: /Users/shane/CMake/bin/
-PATH: /Users/shane/CMake/bin/
+PATH: /Users/shane/vim/bin
+PATH: /Users/shane/CMake/bin
+PATH: /Users/shane/python/bin
 PATH: /usr/local/bin
 PATH: /usr/bin
 PATH: /bin
 PATH: /usr/sbin
 PATH: /sbin
 PATH: /Library/Apple/usr/bin
-PATH: /opt/homebrew/bin
-PATH: /opt/homebrew/sbin
 PATH: /opt/homebrew/bin
 PATH: /opt/homebrew/sbin
 PATH: /usr/local/bin
@@ -68,7 +66,7 @@ configure:3209: result: aarch64-apple-darwin20.6.0
 configure:3281: checking for Python interpreter freezing
 configure:3283: result: ./_bootstrap_python
 configure:3315: checking for python3.11
-configure:3331: found /usr/local/bin/python3.11
+configure:3331: found /Users/shane/python/bin/python3.11
 configure:3342: result: python3.11
 configure:3356: checking Python for regen version
 configure:3359: result: Python 3.11.1
@@ -8741,7 +8739,7 @@ configure:13271: checking for sqlite3_load_extension in -lsqlite3
 configure:13296: gcc -o conftest    -I$(srcdir)/Modules/_sqlite -lsqlite3  conftest.c -lsqlite3  -lsqlite3 -lsqlite3 -lsqlite3 -lsqlite3 -lsqlite3 -lsqlite3 -lsqlite3 -lsqlite3 -lsqlite3 -lsqlite3 -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sqlite3_load_extension", referenced from:
-      _main in conftest-76bfec.o
+      _main in conftest-7dfe10.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:13296: $? = 1
@@ -10432,7 +10430,7 @@ configure:14504: checking for pthread_getcpuclockid
 configure:14504: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_pthread_getcpuclockid", referenced from:
-      _main in conftest-d3dd50.o
+      _main in conftest-2380c2.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:14504: $? = 1
@@ -10919,7 +10917,7 @@ configure:15187: checking for accept4
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_accept4", referenced from:
-      _main in conftest-e362b0.o
+      _main in conftest-da480e.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -11100,7 +11098,7 @@ configure:15187: checking for bind_textdomain_codeset
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_bind_textdomain_codeset", referenced from:
-      _main in conftest-401cb7.o
+      _main in conftest-61b29f.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -11290,7 +11288,7 @@ configure:15187: checking for close_range
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_close_range", referenced from:
-      _main in conftest-5ff7ed.o
+      _main in conftest-8cf7b0.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -11475,7 +11473,7 @@ configure:15187: checking for copy_file_range
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_copy_file_range", referenced from:
-      _main in conftest-2ab542.o
+      _main in conftest-18bcc9.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -11665,7 +11663,7 @@ configure:15187: checking for dup3
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_dup3", referenced from:
-      _main in conftest-85dbec.o
+      _main in conftest-b90dae.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -11853,7 +11851,7 @@ configure:15187: checking for explicit_bzero
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_explicit_bzero", referenced from:
-      _main in conftest-7707aa.o
+      _main in conftest-c60ba5.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -12038,7 +12036,7 @@ configure:15187: checking for explicit_memset
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_explicit_memset", referenced from:
-      _main in conftest-b7ea96.o
+      _main in conftest-cd3b7a.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -12247,7 +12245,7 @@ configure:15187: checking for fdwalk
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_fdwalk", referenced from:
-      _main in conftest-91bdea.o
+      _main in conftest-a7e6ef.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -12438,7 +12436,7 @@ configure:15187: checking for fexecve
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_fexecve", referenced from:
-      _main in conftest-73738f.o
+      _main in conftest-9c8fac.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -12633,7 +12631,7 @@ configure:15187: checking for fork1
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_fork1", referenced from:
-      _main in conftest-f3b7a9.o
+      _main in conftest-c7fd70.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -12849,7 +12847,7 @@ configure:15187: checking for futimesat
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_futimesat", referenced from:
-      _main in conftest-3e8393.o
+      _main in conftest-48e948.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -13123,7 +13121,7 @@ configure:15187: checking for _getpty
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "__getpty", referenced from:
-      _main in conftest-e9efbd.o
+      _main in conftest-e09a42.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -13356,7 +13354,7 @@ configure:15187: checking for getresgid
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_getresgid", referenced from:
-      _main in conftest-dd3a3d.o
+      _main in conftest-38049f.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -13577,7 +13575,7 @@ configure:15187: checking for getresuid
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_getresuid", referenced from:
-      _main in conftest-62d3da.o
+      _main in conftest-a1aeca.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -13806,7 +13804,7 @@ configure:15187: checking for getspent
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_getspent", referenced from:
-      _main in conftest-c0de5f.o
+      _main in conftest-c849c8.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -14029,7 +14027,7 @@ configure:15187: checking for getspnam
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_getspnam", referenced from:
-      _main in conftest-c85ced.o
+      _main in conftest-543d95.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -14304,7 +14302,7 @@ configure:15187: checking for memrchr
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_memrchr", referenced from:
-      _main in conftest-4bf730.o
+      _main in conftest-a88ebf.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -14548,7 +14546,7 @@ configure:15187: checking for mkfifoat
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_mkfifoat", referenced from:
-      _main in conftest-a6bb78.o
+      _main in conftest-660326.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -14790,7 +14788,7 @@ configure:15187: checking for mknodat
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_mknodat", referenced from:
-      _main in conftest-ede8c6.o
+      _main in conftest-8f26e3.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -15037,7 +15035,7 @@ configure:15187: checking for mremap
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_mremap", referenced from:
-      _main in conftest-2a8d0e.o
+      _main in conftest-c14a28.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -15302,7 +15300,7 @@ configure:15187: checking for pipe2
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_pipe2", referenced from:
-      _main in conftest-172e28.o
+      _main in conftest-4b7403.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -15549,7 +15547,7 @@ configure:15187: checking for plock
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_plock", referenced from:
-      _main in conftest-0155c0.o
+      _main in conftest-d244af.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -15800,7 +15798,7 @@ configure:15187: checking for posix_fadvise
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_posix_fadvise", referenced from:
-      _main in conftest-4f51a1.o
+      _main in conftest-ba877f.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -16048,7 +16046,7 @@ configure:15187: checking for posix_fallocate
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_posix_fallocate", referenced from:
-      _main in conftest-4b53dd.o
+      _main in conftest-5b8252.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -16312,7 +16310,7 @@ configure:15187: checking for preadv2
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_preadv2", referenced from:
-      _main in conftest-60b690.o
+      _main in conftest-0412f5.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -16564,7 +16562,7 @@ configure:15187: checking for pthread_condattr_setclock
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_pthread_condattr_setclock", referenced from:
-      _main in conftest-233b12.o
+      _main in conftest-ecef95.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -16816,7 +16814,7 @@ configure:15187: checking for pthread_init
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_pthread_init", referenced from:
-      _main in conftest-6af8f2.o
+      _main in conftest-c9c390.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -17080,7 +17078,7 @@ configure:15187: checking for pwritev2
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_pwritev2", referenced from:
-      _main in conftest-5dd5aa.o
+      _main in conftest-f09aca.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -17355,7 +17353,7 @@ configure:15187: checking for rtpSpawn
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_rtpSpawn", referenced from:
-      _main in conftest-c8072e.o
+      _main in conftest-95a788.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -17619,7 +17617,7 @@ configure:15187: checking for sched_rr_get_interval
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sched_rr_get_interval", referenced from:
-      _main in conftest-f1958d.o
+      _main in conftest-e672c8.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -17880,7 +17878,7 @@ configure:15187: checking for sched_setaffinity
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sched_setaffinity", referenced from:
-      _main in conftest-8beb46.o
+      _main in conftest-716b3e.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -18141,7 +18139,7 @@ configure:15187: checking for sched_setparam
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sched_setparam", referenced from:
-      _main in conftest-129144.o
+      _main in conftest-484888.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -18402,7 +18400,7 @@ configure:15187: checking for sched_setscheduler
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sched_setscheduler", referenced from:
-      _main in conftest-e01856.o
+      _main in conftest-ce7c3e.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -18663,7 +18661,7 @@ configure:15187: checking for sem_clockwait
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sem_clockwait", referenced from:
-      _main in conftest-c3bd1d.o
+      _main in conftest-459587.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -18932,7 +18930,7 @@ configure:15187: checking for sem_timedwait
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sem_timedwait", referenced from:
-      _main in conftest-8d75eb.o
+      _main in conftest-85227f.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -19243,7 +19241,7 @@ configure:15187: checking for setresgid
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_setresgid", referenced from:
-      _main in conftest-e5e5f0.o
+      _main in conftest-6bfcbb.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -19518,7 +19516,7 @@ configure:15187: checking for setresuid
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_setresuid", referenced from:
-      _main in conftest-57f5bf.o
+      _main in conftest-fe26c0.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -19837,7 +19835,7 @@ configure:15187: checking for sigtimedwait
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sigtimedwait", referenced from:
-      _main in conftest-d0d3c1.o
+      _main in conftest-a75b3a.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -20127,7 +20125,7 @@ configure:15187: checking for sigwaitinfo
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_sigwaitinfo", referenced from:
-      _main in conftest-f72e31.o
+      _main in conftest-038fa0.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -20423,7 +20421,7 @@ configure:15187: checking for splice
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_splice", referenced from:
-      _main in conftest-6d5857.o
+      _main in conftest-4b1180.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -20772,7 +20770,7 @@ configure:15187: checking for tmpnam_r
 configure:15187: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_tmpnam_r", referenced from:
-      _main in conftest-e97469.o
+      _main in conftest-da5017.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:15187: $? = 1
@@ -23462,7 +23460,7 @@ configure:18028: checking for fseek64
 configure:18028: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_fseek64", referenced from:
-      _main in conftest-b26514.o
+      _main in conftest-29c736.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18028: $? = 1
@@ -23829,7 +23827,7 @@ configure:18028: checking for ftell64
 configure:18028: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_ftell64", referenced from:
-      _main in conftest-52a35f.o
+      _main in conftest-825cee.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18028: $? = 1
@@ -24894,7 +24892,7 @@ configure:18177: checking for library containing crypt_r
 configure:18208: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_crypt_r", referenced from:
-      _main in conftest-023e9a.o
+      _main in conftest-e6bf62.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18208: $? = 1
@@ -25591,7 +25589,7 @@ configure:18580: checking for clock_nanosleep
 configure:18580: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_clock_nanosleep", referenced from:
-      _main in conftest-dd54b3.o
+      _main in conftest-0dbafe.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18580: $? = 1
@@ -27116,7 +27114,7 @@ configure:19554: checking for gethostbyname_r
 configure:19554: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "_gethostbyname_r", referenced from:
-      _main in conftest-eb8e90.o
+      _main in conftest-975b5d.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:19554: $? = 1
@@ -27510,7 +27508,7 @@ configure:19707: checking for __fpu_control
 configure:19707: gcc -o conftest    conftest.c -ldl  >&5
 Undefined symbols for architecture arm64:
   "___fpu_control", referenced from:
-      _main in conftest-bc7505.o
+      _main in conftest-2dadbf.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:19707: $? = 1
@@ -31545,7 +31543,7 @@ configure:21103: checking for rl_resize_terminal in -lreadline
 configure:21128: gcc -o conftest    conftest.c -lreadline -lreadline -lreadline -ldl  >&5
 Undefined symbols for architecture arm64:
   "_rl_resize_terminal", referenced from:
-      _main in conftest-415ece.o
+      _main in conftest-115646.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:21128: $? = 1
@@ -32347,7 +32345,7 @@ configure:21211: checking for append_history in -lreadline
 configure:21236: gcc -o conftest    conftest.c -lreadline -lreadline -lreadline -ldl  >&5
 Undefined symbols for architecture arm64:
   "_append_history", referenced from:
-      _main in conftest-357bd6.o
+      _main in conftest-33b3e0.o
 ld: symbol(s) not found for architecture arm64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:21236: $? = 1
@@ -37137,6 +37135,7 @@ config.status:1641: creating Modules/Setup.bootstrap
 config.status:1641: creating Modules/Setup.stdlib
 config.status:1641: creating Modules/ld_so_aix
 config.status:1641: creating pyconfig.h
+config.status:1822: pyconfig.h is unchanged
 configure:27387: creating Modules/Setup.local
 configure:27394: creating Makefile
 

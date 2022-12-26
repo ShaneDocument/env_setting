@@ -1,5 +1,9 @@
-" Add these setting to .bash_profile or .bashrc
-PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+# Add these setting to .bash_profile or .bashrc
 alias tmux="TERM=screen=256color-bce tmux"
+
+PATH=$HOME/CMake/bin:$HOME/python/bin:${PATH}
 C_INCLUDE_PATH=$HOME/Python/include/python3.11
 export C_INCLUDE_PATH
+
+# If the proginal vim is support python3, this setting is not necessry.
+PATH=$HOME/vim/bin:${PATH}

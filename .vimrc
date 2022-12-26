@@ -64,6 +64,7 @@ source ~/env_setting/config/.cscope_config
 
 " Plugins
 :set rtp+=~/.vim/bundle/nerdtree
+:set rtp+=~/.vim/bundle/YouCompleteMe
 :source ~/.vim/bundle/vim-buftabline/plugin/buftabline.vim
 
 " NERDTree Setting

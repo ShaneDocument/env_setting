@@ -21,7 +21,7 @@ ls
 C_INCLUDE_PATH=$HOME/Python/include/python3.11
 export C_INCLUDE_PATH
 
-PATH=$HOME/Python/bin:${PATH}
+PATH=$HOME/python/bin:${PATH}
 export PATH
 # Install CMake
 cd CMake
