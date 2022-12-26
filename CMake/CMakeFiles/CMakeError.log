@@ -1,0 +1,2498 @@
+Determining if the environ exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-MvLeab
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8767c/fast && make  -f CMakeFiles/cmTC_8767c.dir/build.make CMakeFiles/cmTC_8767c.dir/build
+Building C object CMakeFiles/cmTC_8767c.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_8767c.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_8767c.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_8767c.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-MvLeab/CheckSymbolExists.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-MvLeab/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'environ'
+  return ((int*)(&environ))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_8767c.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_8767c/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef environ
+  return ((int*)(&environ))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Checking whether CXX compiler has environ in stdlib.h failed to compile with the following output:
+Change Dir: /Users/shane/env_setting/CMake/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8381f/fast && make  -f CMakeFiles/cmTC_8381f.dir/build.make CMakeFiles/cmTC_8381f.dir/build
+Building CXX object CMakeFiles/cmTC_8381f.dir/kwsysPlatformTestsCXX.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/clang++ -DTEST_KWSYS_CXX_HAS_ENVIRON_IN_STDLIB_H  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_8381f.dir/kwsysPlatformTestsCXX.cxx.o -MF CMakeFiles/cmTC_8381f.dir/kwsysPlatformTestsCXX.cxx.o.d -o CMakeFiles/cmTC_8381f.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx:53:13: error: use of undeclared identifier 'environ'
+  char* e = environ[0];
+            ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_8381f.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make: *** [cmTC_8381f/fast] Error 2
+
+
+
+Checking whether CXX compiler struct stat has st_mtim member failed to compile with the following output:
+Change Dir: /Users/shane/env_setting/CMake/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4b676/fast && make  -f CMakeFiles/cmTC_4b676.dir/build.make CMakeFiles/cmTC_4b676.dir/build
+Building CXX object CMakeFiles/cmTC_4b676.dir/kwsysPlatformTestsCXX.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/clang++ -DTEST_KWSYS_CXX_STAT_HAS_ST_MTIM  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_4b676.dir/kwsysPlatformTestsCXX.cxx.o -MF CMakeFiles/cmTC_4b676.dir/kwsysPlatformTestsCXX.cxx.o.d -o CMakeFiles/cmTC_4b676.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx:12:15: error: no member named 'st_mtim' in 'stat'
+  (void)stat1.st_mtim.tv_sec;
+        ~~~~~ ^
+/Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx:13:15: error: no member named 'st_mtim' in 'stat'
+  (void)stat1.st_mtim.tv_nsec;
+        ~~~~~ ^
+2 errors generated.
+make[1]: *** [CMakeFiles/cmTC_4b676.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make: *** [cmTC_4b676/fast] Error 2
+
+
+
+Checking whether CXX compiler has rlimit64 failed to compile with the following output:
+Change Dir: /Users/shane/env_setting/CMake/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9b4ae/fast && make  -f CMakeFiles/cmTC_9b4ae.dir/build.make CMakeFiles/cmTC_9b4ae.dir/build
+Building CXX object CMakeFiles/cmTC_9b4ae.dir/kwsysPlatformTestsCXX.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/clang++ -DTEST_KWSYS_CXX_HAS_RLIMIT64  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_9b4ae.dir/kwsysPlatformTestsCXX.cxx.o -MF CMakeFiles/cmTC_9b4ae.dir/kwsysPlatformTestsCXX.cxx.o.d -o CMakeFiles/cmTC_9b4ae.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx:75:19: error: variable has incomplete type 'struct rlimit64'
+  struct rlimit64 rlim;
+                  ^
+/Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx:75:10: note: forward declaration of 'rlimit64'
+  struct rlimit64 rlim;
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_9b4ae.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make: *** [cmTC_9b4ae/fast] Error 2
+
+
+
+Checking whether <ext/stdio_filebuf.h> is available failed to compile with the following output:
+Change Dir: /Users/shane/env_setting/CMake/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_994ea/fast && make  -f CMakeFiles/cmTC_994ea.dir/build.make CMakeFiles/cmTC_994ea.dir/build
+Building CXX object CMakeFiles/cmTC_994ea.dir/kwsysPlatformTestsCXX.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/clang++ -DTEST_KWSYS_CXX_HAS_EXT_STDIO_FILEBUF_H  -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_994ea.dir/kwsysPlatformTestsCXX.cxx.o -MF CMakeFiles/cmTC_994ea.dir/kwsysPlatformTestsCXX.cxx.o.d -o CMakeFiles/cmTC_994ea.dir/kwsysPlatformTestsCXX.cxx.o -c /Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/Users/shane/env_setting/CMake/Source/kwsys/kwsysPlatformTestsCXX.cxx:169:12: fatal error: 'ext/stdio_filebuf.h' file not found
+#  include <ext/stdio_filebuf.h>
+           ^~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_994ea.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make: *** [cmTC_994ea/fast] Error 2
+
+
+
+Determining if the function connect exists in the socket;-framework SystemConfiguration failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-CHn7H2
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_42d76/fast && make  -f CMakeFiles/cmTC_42d76.dir/build.make CMakeFiles/cmTC_42d76.dir/build
+Building C object CMakeFiles/cmTC_42d76.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=connect -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_42d76.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_42d76.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_42d76.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-CHn7H2/CheckFunctionExists.c
+Linking C executable cmTC_42d76
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_42d76.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=connect -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_42d76.dir/CheckFunctionExists.c.o -o cmTC_42d76  -lsocket -framework SystemConfiguration 
+ld: library not found for -lsocket
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_42d76] Error 1
+make: *** [cmTC_42d76/fast] Error 2
+
+
+
+Determining if the function idn2_lookup_ul exists in the idn2;-framework SystemConfiguration;-framework Security;-framework CoreFoundation;cmnghttp2 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-664Cbs
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_419d8/fast && make  -f CMakeFiles/cmTC_419d8.dir/build.make CMakeFiles/cmTC_419d8.dir/build
+Building C object CMakeFiles/cmTC_419d8.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=idn2_lookup_ul -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_419d8.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_419d8.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_419d8.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-664Cbs/CheckFunctionExists.c
+Linking C executable cmTC_419d8
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_419d8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=idn2_lookup_ul -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_419d8.dir/CheckFunctionExists.c.o -o cmTC_419d8  -lidn2 -framework SystemConfiguration -framework Security -framework CoreFoundation -lcmnghttp2 
+ld: library not found for -lidn2
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_419d8] Error 1
+make: *** [cmTC_419d8/fast] Error 2
+
+
+
+Determining if files inttypes.h;sys/filio.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/utime.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-0cOycb
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_32a0d/fast && make  -f CMakeFiles/cmTC_32a0d.dir/build.make CMakeFiles/cmTC_32a0d.dir/build
+Building C object CMakeFiles/cmTC_32a0d.dir/HAVE_SYS_UTIME_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_32a0d.dir/HAVE_SYS_UTIME_H.c.o -MF CMakeFiles/cmTC_32a0d.dir/HAVE_SYS_UTIME_H.c.o.d -o CMakeFiles/cmTC_32a0d.dir/HAVE_SYS_UTIME_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-0cOycb/HAVE_SYS_UTIME_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-0cOycb/HAVE_SYS_UTIME_H.c:15:10: fatal error: 'sys/utime.h' file not found
+#include <sys/utime.h>
+         ^~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_32a0d.dir/HAVE_SYS_UTIME_H.c.o] Error 1
+make: *** [cmTC_32a0d/fast] Error 2
+
+
+Source:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/utime.h>
+
+
+int main(void){return 0;}
+
+Determining if files inttypes.h;sys/filio.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/xattr.h;arpa/inet.h;arpa/tftp.h;assert.h;errno.h;fcntl.h;idn2.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-3itW7r
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_067ea/fast && make  -f CMakeFiles/cmTC_067ea.dir/build.make CMakeFiles/cmTC_067ea.dir/build
+Building C object CMakeFiles/cmTC_067ea.dir/HAVE_IDN2_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_067ea.dir/HAVE_IDN2_H.c.o -MF CMakeFiles/cmTC_067ea.dir/HAVE_IDN2_H.c.o.d -o CMakeFiles/cmTC_067ea.dir/HAVE_IDN2_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-3itW7r/HAVE_IDN2_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-3itW7r/HAVE_IDN2_H.c:21:10: fatal error: 'idn2.h' file not found
+#include <idn2.h>
+         ^~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_067ea.dir/HAVE_IDN2_H.c.o] Error 1
+make: *** [cmTC_067ea/fast] Error 2
+
+
+Source:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn2.h>
+
+
+int main(void){return 0;}
+
+Determining if files inttypes.h;sys/filio.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/xattr.h;arpa/inet.h;arpa/tftp.h;assert.h;errno.h;fcntl.h;ifaddrs.h;io.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-N60YEu
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cf15c/fast && make  -f CMakeFiles/cmTC_cf15c.dir/build.make CMakeFiles/cmTC_cf15c.dir/build
+Building C object CMakeFiles/cmTC_cf15c.dir/HAVE_IO_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_cf15c.dir/HAVE_IO_H.c.o -MF CMakeFiles/cmTC_cf15c.dir/HAVE_IO_H.c.o.d -o CMakeFiles/cmTC_cf15c.dir/HAVE_IO_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-N60YEu/HAVE_IO_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-N60YEu/HAVE_IO_H.c:22:10: fatal error: 'io.h' file not found
+#include <io.h>
+         ^~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_cf15c.dir/HAVE_IO_H.c.o] Error 1
+make: *** [cmTC_cf15c/fast] Error 2
+
+
+Source:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <io.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file linux/tcp.h exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-ZcB8F3
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_22344/fast && make  -f CMakeFiles/cmTC_22344.dir/build.make CMakeFiles/cmTC_22344.dir/build
+Building C object CMakeFiles/cmTC_22344.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_22344.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_22344.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_22344.dir/CheckIncludeFile.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-ZcB8F3/CheckIncludeFile.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-ZcB8F3/CheckIncludeFile.c:1:10: fatal error: 'linux/tcp.h' file not found
+#include <linux/tcp.h>
+         ^~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_22344.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_22344/fast] Error 2
+
+
+
+Determining if files inttypes.h;sys/filio.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/xattr.h;arpa/inet.h;arpa/tftp.h;assert.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;signal.h;ssl.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-spiIYG
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d973d/fast && make  -f CMakeFiles/cmTC_d973d.dir/build.make CMakeFiles/cmTC_d973d.dir/build
+Building C object CMakeFiles/cmTC_d973d.dir/HAVE_SSL_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d973d.dir/HAVE_SSL_H.c.o -MF CMakeFiles/cmTC_d973d.dir/HAVE_SSL_H.c.o.d -o CMakeFiles/cmTC_d973d.dir/HAVE_SSL_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-spiIYG/HAVE_SSL_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-spiIYG/HAVE_SSL_H.c:32:10: fatal error: 'ssl.h' file not found
+#include <ssl.h>
+         ^~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_d973d.dir/HAVE_SSL_H.c.o] Error 1
+make: *** [cmTC_d973d/fast] Error 2
+
+
+Source:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files inttypes.h;sys/filio.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/xattr.h;arpa/inet.h;arpa/tftp.h;assert.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;signal.h;stdbool.h;stdint.h;stdlib.h;string.h;strings.h;stropts.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-hlq7ec
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9857b/fast && make  -f CMakeFiles/cmTC_9857b.dir/build.make CMakeFiles/cmTC_9857b.dir/build
+Building C object CMakeFiles/cmTC_9857b.dir/HAVE_STROPTS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_9857b.dir/HAVE_STROPTS_H.c.o -MF CMakeFiles/cmTC_9857b.dir/HAVE_STROPTS_H.c.o.d -o CMakeFiles/cmTC_9857b.dir/HAVE_STROPTS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-hlq7ec/HAVE_STROPTS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-hlq7ec/HAVE_STROPTS_H.c:37:10: fatal error: 'stropts.h' file not found
+#include <stropts.h>
+         ^~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_9857b.dir/HAVE_STROPTS_H.c.o] Error 1
+make: *** [cmTC_9857b/fast] Error 2
+
+
+Source:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files inttypes.h;sys/filio.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/xattr.h;arpa/inet.h;arpa/tftp.h;assert.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;signal.h;stdbool.h;stdint.h;stdlib.h;string.h;strings.h;termio.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-I4FJVx
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7ba0a/fast && make  -f CMakeFiles/cmTC_7ba0a.dir/build.make CMakeFiles/cmTC_7ba0a.dir/build
+Building C object CMakeFiles/cmTC_7ba0a.dir/HAVE_TERMIO_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_7ba0a.dir/HAVE_TERMIO_H.c.o -MF CMakeFiles/cmTC_7ba0a.dir/HAVE_TERMIO_H.c.o.d -o CMakeFiles/cmTC_7ba0a.dir/HAVE_TERMIO_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-I4FJVx/HAVE_TERMIO_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-I4FJVx/HAVE_TERMIO_H.c:37:10: fatal error: 'termio.h' file not found
+#include <termio.h>
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_7ba0a.dir/HAVE_TERMIO_H.c.o] Error 1
+make: *** [cmTC_7ba0a/fast] Error 2
+
+
+Source:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+
+
+int main(void){return 0;}
+
+Determining if files inttypes.h;sys/filio.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h;sys/stat.h;sys/time.h;sys/types.h;sys/un.h;sys/xattr.h;arpa/inet.h;arpa/tftp.h;assert.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;signal.h;stdbool.h;stdint.h;stdlib.h;string.h;strings.h;termios.h;time.h;unistd.h;utime.h;process.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-OGByA0
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0a42b/fast && make  -f CMakeFiles/cmTC_0a42b.dir/build.make CMakeFiles/cmTC_0a42b.dir/build
+Building C object CMakeFiles/cmTC_0a42b.dir/HAVE_PROCESS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_0a42b.dir/HAVE_PROCESS_H.c.o -MF CMakeFiles/cmTC_0a42b.dir/HAVE_PROCESS_H.c.o.d -o CMakeFiles/cmTC_0a42b.dir/HAVE_PROCESS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-OGByA0/HAVE_PROCESS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-OGByA0/HAVE_PROCESS_H.c:41:10: fatal error: 'process.h' file not found
+#include <process.h>
+         ^~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_0a42b.dir/HAVE_PROCESS_H.c.o] Error 1
+make: *** [cmTC_0a42b/fast] Error 2
+
+
+Source:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <process.h>
+
+
+int main(void){return 0;}
+
+Determining if the stricmp exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-NFF1SW
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_539ab/fast && make  -f CMakeFiles/cmTC_539ab.dir/build.make CMakeFiles/cmTC_539ab.dir/build
+Building C object CMakeFiles/cmTC_539ab.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_539ab.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_539ab.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_539ab.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-NFF1SW/CheckSymbolExists.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-NFF1SW/CheckSymbolExists.c:49:19: error: use of undeclared identifier 'stricmp'
+  return ((int*)(&stricmp))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_539ab.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_539ab/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-drPVmF
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ce455/fast && make  -f CMakeFiles/cmTC_ce455.dir/build.make CMakeFiles/cmTC_ce455.dir/build
+Building C object CMakeFiles/cmTC_ce455.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_ce455.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ce455.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ce455.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-drPVmF/CheckSymbolExists.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-drPVmF/CheckSymbolExists.c:49:19: error: use of undeclared identifier 'strcmpi'; did you mean 'strcmp'?
+  return ((int*)(&strcmpi))[argc];
+                  ^~~~~~~
+                  strcmp
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/string.h:77:6: note: 'strcmp' declared here
+int      strcmp(const char *__s1, const char *__s2);
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_ce455.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_ce455/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the closesocket exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Lh5GRa
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e522d/fast && make  -f CMakeFiles/cmTC_e522d.dir/build.make CMakeFiles/cmTC_e522d.dir/build
+Building C object CMakeFiles/cmTC_e522d.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e522d.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_e522d.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e522d.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Lh5GRa/CheckSymbolExists.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Lh5GRa/CheckSymbolExists.c:49:19: error: use of undeclared identifier 'closesocket'
+  return ((int*)(&closesocket))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_e522d.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_e522d/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getpass_r exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-gZOotv
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_88135/fast && make  -f CMakeFiles/cmTC_88135.dir/build.make CMakeFiles/cmTC_88135.dir/build
+Building C object CMakeFiles/cmTC_88135.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_88135.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_88135.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_88135.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-gZOotv/CheckSymbolExists.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-gZOotv/CheckSymbolExists.c:49:19: error: use of undeclared identifier 'getpass_r'; did you mean 'getpass'?
+  return ((int*)(&getpass_r))[argc];
+                  ^~~~~~~~~
+                  getpass
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/unistd.h:559:7: note: 'getpass' declared here
+char    *getpass(const char *) __POSIX_C_DEPRECATED(199506L);
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_88135.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_88135/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpass_r
+  return ((int*)(&getpass_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the gethostbyname_r exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-eygva3
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_db329/fast && make  -f CMakeFiles/cmTC_db329.dir/build.make CMakeFiles/cmTC_db329.dir/build
+Building C object CMakeFiles/cmTC_db329.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_db329.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_db329.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_db329.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-eygva3/CheckSymbolExists.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-eygva3/CheckSymbolExists.c:49:19: error: use of undeclared identifier 'gethostbyname_r'
+  return ((int*)(&gethostbyname_r))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_db329.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_db329/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gethostbyname_r
+  return ((int*)(&gethostbyname_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _strtoi64 exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-0gUoxi
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_815e3/fast && make  -f CMakeFiles/cmTC_815e3.dir/build.make CMakeFiles/cmTC_815e3.dir/build
+Building C object CMakeFiles/cmTC_815e3.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_815e3.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_815e3.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_815e3.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-0gUoxi/CheckSymbolExists.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-0gUoxi/CheckSymbolExists.c:49:19: error: use of undeclared identifier '_strtoi64'
+  return ((int*)(&_strtoi64))[argc];
+                  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_815e3.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_815e3/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <inttypes.h>
+#include <sys/filio.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strtoi64
+  return ((int*)(&_strtoi64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing Curl Test HAVE_FSETXATTR_5 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_42e9a/fast && make  -f CMakeFiles/cmTC_42e9a.dir/build.make CMakeFiles/cmTC_42e9a.dir/build
+Building C object CMakeFiles/cmTC_42e9a.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_FSETXATTR_5  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_42e9a.dir/CurlTests.c.o -MF CMakeFiles/cmTC_42e9a.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_42e9a.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:431:26: error: too few arguments to function call, expected 6, have 5
+  fsetxattr(0, 0, 0, 0, 0);
+  ~~~~~~~~~              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/xattr.h:67:5: note: 'fsetxattr' declared here
+int fsetxattr(int fd, const char *name, const void *value, size_t size, u_int32_t position, int options);
+    ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_42e9a.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_42e9a/fast] Error 2
+
+
+Determining size of ADDRESS_FAMILY failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-cTOWiz
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_742cf/fast && make  -f CMakeFiles/cmTC_742cf.dir/build.make CMakeFiles/cmTC_742cf.dir/build
+Building C object CMakeFiles/cmTC_742cf.dir/SIZEOF_ADDRESS_FAMILY.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_742cf.dir/SIZEOF_ADDRESS_FAMILY.c.o -MF CMakeFiles/cmTC_742cf.dir/SIZEOF_ADDRESS_FAMILY.c.o.d -o CMakeFiles/cmTC_742cf.dir/SIZEOF_ADDRESS_FAMILY.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-cTOWiz/SIZEOF_ADDRESS_FAMILY.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-cTOWiz/SIZEOF_ADDRESS_FAMILY.c:4:10: fatal error: 'ws2def.h' file not found
+#include "ws2def.h"
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_742cf.dir/SIZEOF_ADDRESS_FAMILY.c.o] Error 1
+make: *** [cmTC_742cf/fast] Error 2
+
+
+SIZEOF_ADDRESS_FAMILY.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "ws2def.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ADDRESS_FAMILY))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing Curl Test HAVE_IOCTLSOCKET failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bbaa2/fast && make  -f CMakeFiles/cmTC_bbaa2.dir/build.make CMakeFiles/cmTC_bbaa2.dir/build
+Building C object CMakeFiles/cmTC_bbaa2.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_IOCTLSOCKET  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_bbaa2.dir/CurlTests.c.o -MF CMakeFiles/cmTC_bbaa2.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_bbaa2.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:221:44: error: use of undeclared identifier 'FIONBIO'
+ unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+                                           ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_bbaa2.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_bbaa2/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_aead0/fast && make  -f CMakeFiles/cmTC_aead0.dir/build.make CMakeFiles/cmTC_aead0.dir/build
+Building C object CMakeFiles/cmTC_aead0.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_aead0.dir/CurlTests.c.o -MF CMakeFiles/cmTC_aead0.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_aead0.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_aead0
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_aead0.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_aead0.dir/CurlTests.c.o -o cmTC_aead0 
+Undefined symbols for architecture arm64:
+  "_IoctlSocket", referenced from:
+      _main in CurlTests.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_aead0] Error 1
+make: *** [cmTC_aead0/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_28983/fast && make  -f CMakeFiles/cmTC_28983.dir/build.make CMakeFiles/cmTC_28983.dir/build
+Building C object CMakeFiles/cmTC_28983.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_IOCTLSOCKET_CAMEL_FIONBIO  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_28983.dir/CurlTests.c.o -MF CMakeFiles/cmTC_28983.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_28983.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:269:32: error: use of undeclared identifier 'FIONBIO'
+        if(0 != IoctlSocket(0, FIONBIO, &flags))
+                               ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_28983.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_28983/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4ce4b/fast && make  -f CMakeFiles/cmTC_4ce4b.dir/build.make CMakeFiles/cmTC_4ce4b.dir/build
+Building C object CMakeFiles/cmTC_4ce4b.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_IOCTLSOCKET_FIONBIO  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_4ce4b.dir/CurlTests.c.o -MF CMakeFiles/cmTC_4ce4b.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_4ce4b.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:292:32: error: use of undeclared identifier 'FIONBIO'
+        if(0 != ioctlsocket(0, FIONBIO, &flags))
+                               ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_4ce4b.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_4ce4b/fast] Error 2
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4b853/fast && make  -f CMakeFiles/cmTC_4b853.dir/build.make CMakeFiles/cmTC_4b853.dir/build
+Building C object CMakeFiles/cmTC_4b853.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_4b853.dir/CurlTests.c.o -MF CMakeFiles/cmTC_4b853.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_4b853.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:384:43: error: use of undeclared identifier 'SO_NONBLOCK'
+        if(0 != setsockopt(0, SOL_SOCKET, SO_NONBLOCK, 0, 0))
+                                          ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_4b853.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_4b853/fast] Error 2
+
+
+Performing Curl Test HAVE_O_NONBLOCK failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_20d47/fast && make  -f CMakeFiles/cmTC_20d47.dir/build.make CMakeFiles/cmTC_20d47.dir/build
+Building C object CMakeFiles/cmTC_20d47.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_O_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_20d47.dir/CurlTests.c.o -MF CMakeFiles/cmTC_20d47.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_20d47.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_20d47
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_20d47.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DHAVE_O_NONBLOCK  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_20d47.dir/CurlTests.c.o -o cmTC_20d47 
+Undefined symbols for architecture arm64:
+  "_main", referenced from:
+     implicit entry/start for main executable
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_20d47] Error 1
+make: *** [cmTC_20d47/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1a684/fast && make  -f CMakeFiles/cmTC_1a684.dir/build.make CMakeFiles/cmTC_1a684.dir/build
+Building C object CMakeFiles/cmTC_1a684.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_GETHOSTBYNAME_R_3  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_1a684.dir/CurlTests.c.o -MF CMakeFiles/cmTC_1a684.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_1a684.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:99:23: error: variable has incomplete type 'struct hostent_data'
+  struct hostent_data hdata;
+                      ^
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:99:10: note: forward declaration of 'struct hostent_data'
+  struct hostent_data hdata;
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_1a684.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_1a684/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5d0ca/fast && make  -f CMakeFiles/cmTC_5d0ca.dir/build.make CMakeFiles/cmTC_5d0ca.dir/build
+Building C object CMakeFiles/cmTC_5d0ca.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_GETHOSTBYNAME_R_5  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_5d0ca.dir/CurlTests.c.o -MF CMakeFiles/cmTC_5d0ca.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_5d0ca.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_5d0ca
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_5d0ca.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DHAVE_GETHOSTBYNAME_R_5  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5d0ca.dir/CurlTests.c.o -o cmTC_5d0ca 
+Undefined symbols for architecture arm64:
+  "_gethostbyname_r", referenced from:
+      _main in CurlTests.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_5d0ca] Error 1
+make: *** [cmTC_5d0ca/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_6 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8f69c/fast && make  -f CMakeFiles/cmTC_8f69c.dir/build.make CMakeFiles/cmTC_8f69c.dir/build
+Building C object CMakeFiles/cmTC_8f69c.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_GETHOSTBYNAME_R_6  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_8f69c.dir/CurlTests.c.o -MF CMakeFiles/cmTC_8f69c.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_8f69c.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_8f69c
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_8f69c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DHAVE_GETHOSTBYNAME_R_6  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8f69c.dir/CurlTests.c.o -o cmTC_8f69c 
+Undefined symbols for architecture arm64:
+  "_gethostbyname_r", referenced from:
+      _main in CurlTests.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_8f69c] Error 1
+make: *** [cmTC_8f69c/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1c0aa/fast && make  -f CMakeFiles/cmTC_1c0aa.dir/build.make CMakeFiles/cmTC_1c0aa.dir/build
+Building C object CMakeFiles/cmTC_1c0aa.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_GETHOSTBYNAME_R_3_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_1c0aa.dir/CurlTests.c.o -MF CMakeFiles/cmTC_1c0aa.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_1c0aa.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:99:23: error: variable has incomplete type 'struct hostent_data'
+  struct hostent_data hdata;
+                      ^
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:99:10: note: forward declaration of 'struct hostent_data'
+  struct hostent_data hdata;
+         ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_1c0aa.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_1c0aa/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d7982/fast && make  -f CMakeFiles/cmTC_d7982.dir/build.make CMakeFiles/cmTC_d7982.dir/build
+Building C object CMakeFiles/cmTC_d7982.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_GETHOSTBYNAME_R_5_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d7982.dir/CurlTests.c.o -MF CMakeFiles/cmTC_d7982.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_d7982.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_d7982
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_d7982.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DHAVE_GETHOSTBYNAME_R_5_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d7982.dir/CurlTests.c.o -o cmTC_d7982 
+Undefined symbols for architecture arm64:
+  "_gethostbyname_r", referenced from:
+      _main in CurlTests.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_d7982] Error 1
+make: *** [cmTC_d7982/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_6_REENTRANT failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3f6ba/fast && make  -f CMakeFiles/cmTC_3f6ba.dir/build.make CMakeFiles/cmTC_3f6ba.dir/build
+Building C object CMakeFiles/cmTC_3f6ba.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_GETHOSTBYNAME_R_6_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_3f6ba.dir/CurlTests.c.o -MF CMakeFiles/cmTC_3f6ba.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_3f6ba.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_3f6ba
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_3f6ba.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DHAVE_GETHOSTBYNAME_R_6_REENTRANT  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3f6ba.dir/CurlTests.c.o -o cmTC_3f6ba 
+Undefined symbols for architecture arm64:
+  "_gethostbyname_r", referenced from:
+      _main in CurlTests.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_3f6ba] Error 1
+make: *** [cmTC_3f6ba/fast] Error 2
+
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_51f49/fast && make  -f CMakeFiles/cmTC_51f49.dir/build.make CMakeFiles/cmTC_51f49.dir/build
+Building C object CMakeFiles/cmTC_51f49.dir/CurlTests.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DHAVE_GLIBC_STRERROR_R  -DHAVE_INTTYPES_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_51f49.dir/CurlTests.c.o -MF CMakeFiles/cmTC_51f49.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_51f49.dir/CurlTests.c.o -c /Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c
+/Users/shane/env_setting/CMake/Utilities/cmcurl/CMake/CurlTests.c:400:51: error: subscripted value is not an array, pointer, or vector
+  check(strerror_r(EACCES, buffer, sizeof(buffer))[0]);
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_51f49.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_51f49/fast] Error 2
+
+
+Determining if the getrandom exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-b4CZav
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f185f/fast && make  -f CMakeFiles/cmTC_f185f.dir/build.make CMakeFiles/cmTC_f185f.dir/build
+Building C object CMakeFiles/cmTC_f185f.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_f185f.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_f185f.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f185f.dir/CheckSymbolExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-b4CZav/CheckSymbolExists.c
+In file included from /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-b4CZav/CheckSymbolExists.c:2:
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/random.h:36:21: error: expected parameter declarator
+    __OSX_AVAILABLE(10.12) __IOS_AVAILABLE(10.0) __TVOS_AVAILABLE(10.0) __WATCHOS_AVAILABLE(3.0)
+                    ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/random.h:36:21: error: expected ')'
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/random.h:36:20: note: to match this '('
+    __OSX_AVAILABLE(10.12) __IOS_AVAILABLE(10.0) __TVOS_AVAILABLE(10.0) __WATCHOS_AVAILABLE(3.0)
+                   ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/random.h:36:28: error: expected function body after function declarator
+    __OSX_AVAILABLE(10.12) __IOS_AVAILABLE(10.0) __TVOS_AVAILABLE(10.0) __WATCHOS_AVAILABLE(3.0)
+                           ^
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-b4CZav/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'getrandom'
+  return ((int*)(&getrandom))[argc];
+                  ^
+4 errors generated.
+make[1]: *** [CMakeFiles/cmTC_f185f.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTC_f185f/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/random.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrandom
+  return ((int*)(&getrandom))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_SYSCALL_GETRANDOM failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-1fGkVI
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bd632/fast && make  -f CMakeFiles/cmTC_bd632.dir/build.make CMakeFiles/cmTC_bd632.dir/build
+Building C object CMakeFiles/cmTC_bd632.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_SYSCALL_GETRANDOM  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_bd632.dir/src.c.o -MF CMakeFiles/cmTC_bd632.dir/src.c.o.d -o CMakeFiles/cmTC_bd632.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-1fGkVI/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-1fGkVI/src.c:6:21: error: use of undeclared identifier 'SYS_getrandom'
+            syscall(SYS_getrandom, NULL, 0, 0);
+                    ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_bd632.dir/src.c.o] Error 1
+make: *** [cmTC_bd632/fast] Error 2
+
+
+Source file was:
+
+        #include <stdlib.h>  /* for NULL */
+        #include <unistd.h>  /* for syscall */
+        #include <sys/syscall.h>  /* for SYS_getrandom */
+        int main() {
+            syscall(SYS_getrandom, NULL, 0, 0);
+            return 0;
+        }
+
+Determining if the include file byteswap.h exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-byB8dB
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a620e/fast && make  -f CMakeFiles/cmTC_a620e.dir/build.make CMakeFiles/cmTC_a620e.dir/build
+Building C object CMakeFiles/cmTC_a620e.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_a620e.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_a620e.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_a620e.dir/CheckIncludeFile.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-byB8dB/CheckIncludeFile.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-byB8dB/CheckIncludeFile.c:1:10: fatal error: 'byteswap.h' file not found
+#include <byteswap.h>
+         ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_a620e.dir/CheckIncludeFile.c.o] Error 1
+make: *** [cmTC_a620e/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_BSWAP_16 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-qxRoCS
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a41d7/fast && make  -f CMakeFiles/cmTC_a41d7.dir/build.make CMakeFiles/cmTC_a41d7.dir/build
+Building C object CMakeFiles/cmTC_a41d7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_BSWAP_16  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_a41d7.dir/src.c.o -MF CMakeFiles/cmTC_a41d7.dir/src.c.o.d -o CMakeFiles/cmTC_a41d7.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-qxRoCS/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-qxRoCS/src.c:1:9: fatal error: 'byteswap.h' file not found
+#include<byteswap.h>
+        ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_a41d7.dir/src.c.o] Error 1
+make: *** [cmTC_a41d7/fast] Error 2
+
+
+Source file was:
+#include<byteswap.h>
+int main(void){bswap_16(0);return 0;}
+
+Performing C SOURCE FILE Test HAVE_BSWAP_32 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-qhV1yg
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_72bea/fast && make  -f CMakeFiles/cmTC_72bea.dir/build.make CMakeFiles/cmTC_72bea.dir/build
+Building C object CMakeFiles/cmTC_72bea.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_BSWAP_32  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_72bea.dir/src.c.o -MF CMakeFiles/cmTC_72bea.dir/src.c.o.d -o CMakeFiles/cmTC_72bea.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-qhV1yg/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-qhV1yg/src.c:1:9: fatal error: 'byteswap.h' file not found
+#include<byteswap.h>
+        ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_72bea.dir/src.c.o] Error 1
+make: *** [cmTC_72bea/fast] Error 2
+
+
+Source file was:
+#include<byteswap.h>
+int main(void){bswap_32(0);return 0;}
+
+Performing C SOURCE FILE Test HAVE_BSWAP_64 failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-17WYNo
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_73e60/fast && make  -f CMakeFiles/cmTC_73e60.dir/build.make CMakeFiles/cmTC_73e60.dir/build
+Building C object CMakeFiles/cmTC_73e60.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_BSWAP_64  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_73e60.dir/src.c.o -MF CMakeFiles/cmTC_73e60.dir/src.c.o.d -o CMakeFiles/cmTC_73e60.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-17WYNo/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-17WYNo/src.c:1:9: fatal error: 'byteswap.h' file not found
+#include<byteswap.h>
+        ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_73e60.dir/src.c.o] Error 1
+make: *** [cmTC_73e60/fast] Error 2
+
+
+Source file was:
+#include<byteswap.h>
+int main(void){bswap_64(0);return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;direct.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-RGn0f4
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_45c7c/fast && make  -f CMakeFiles/cmTC_45c7c.dir/build.make CMakeFiles/cmTC_45c7c.dir/build
+Building C object CMakeFiles/cmTC_45c7c.dir/HAVE_DIRECT_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_45c7c.dir/HAVE_DIRECT_H.c.o -MF CMakeFiles/cmTC_45c7c.dir/HAVE_DIRECT_H.c.o.d -o CMakeFiles/cmTC_45c7c.dir/HAVE_DIRECT_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-RGn0f4/HAVE_DIRECT_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-RGn0f4/HAVE_DIRECT_H.c:5:10: fatal error: 'direct.h' file not found
+#include <direct.h>
+         ^~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_45c7c.dir/HAVE_DIRECT_H.c.o] Error 1
+make: *** [cmTC_45c7c/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <direct.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;ext2fs/ext2_fs.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-NgsAcU
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_07c05/fast && make  -f CMakeFiles/cmTC_07c05.dir/build.make CMakeFiles/cmTC_07c05.dir/build
+Building C object CMakeFiles/cmTC_07c05.dir/HAVE_EXT2FS_EXT2_FS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_07c05.dir/HAVE_EXT2FS_EXT2_FS_H.c.o -MF CMakeFiles/cmTC_07c05.dir/HAVE_EXT2FS_EXT2_FS_H.c.o.d -o CMakeFiles/cmTC_07c05.dir/HAVE_EXT2FS_EXT2_FS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-NgsAcU/HAVE_EXT2FS_EXT2_FS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-NgsAcU/HAVE_EXT2FS_EXT2_FS_H.c:7:10: fatal error: 'ext2fs/ext2_fs.h' file not found
+#include <ext2fs/ext2_fs.h>
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_07c05.dir/HAVE_EXT2FS_EXT2_FS_H.c.o] Error 1
+make: *** [cmTC_07c05/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <ext2fs/ext2_fs.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_WORKING_EXT2_IOC_GETFLAGS failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lvumq5
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_92faa/fast && make  -f CMakeFiles/cmTC_92faa.dir/build.make CMakeFiles/cmTC_92faa.dir/build
+Building C object CMakeFiles/cmTC_92faa.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_WORKING_EXT2_IOC_GETFLAGS  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_92faa.dir/src.c.o -MF CMakeFiles/cmTC_92faa.dir/src.c.o.d -o CMakeFiles/cmTC_92faa.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lvumq5/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lvumq5/src.c:2:10: fatal error: 'ext2fs/ext2_fs.h' file not found
+#include <ext2fs/ext2_fs.h>
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_92faa.dir/src.c.o] Error 1
+make: *** [cmTC_92faa/fast] Error 2
+
+
+Source file was:
+#include <sys/ioctl.h>
+#include <ext2fs/ext2_fs.h>
+int main(void) { return EXT2_IOC_GETFLAGS; }
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-8Lco4i
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_70351/fast && make  -f CMakeFiles/cmTC_70351.dir/build.make CMakeFiles/cmTC_70351.dir/build
+Building C object CMakeFiles/cmTC_70351.dir/HAVE_LINUX_TYPES_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_70351.dir/HAVE_LINUX_TYPES_H.c.o -MF CMakeFiles/cmTC_70351.dir/HAVE_LINUX_TYPES_H.c.o.d -o CMakeFiles/cmTC_70351.dir/HAVE_LINUX_TYPES_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-8Lco4i/HAVE_LINUX_TYPES_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-8Lco4i/HAVE_LINUX_TYPES_H.c:11:10: fatal error: 'linux/types.h' file not found
+#include <linux/types.h>
+         ^~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_70351.dir/HAVE_LINUX_TYPES_H.c.o] Error 1
+make: *** [cmTC_70351/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/fiemap.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lqL8LR
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4bbf6/fast && make  -f CMakeFiles/cmTC_4bbf6.dir/build.make CMakeFiles/cmTC_4bbf6.dir/build
+Building C object CMakeFiles/cmTC_4bbf6.dir/HAVE_LINUX_FIEMAP_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_4bbf6.dir/HAVE_LINUX_FIEMAP_H.c.o -MF CMakeFiles/cmTC_4bbf6.dir/HAVE_LINUX_FIEMAP_H.c.o.d -o CMakeFiles/cmTC_4bbf6.dir/HAVE_LINUX_FIEMAP_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lqL8LR/HAVE_LINUX_FIEMAP_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lqL8LR/HAVE_LINUX_FIEMAP_H.c:11:10: fatal error: 'linux/fiemap.h' file not found
+#include <linux/fiemap.h>
+         ^~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_4bbf6.dir/HAVE_LINUX_FIEMAP_H.c.o] Error 1
+make: *** [cmTC_4bbf6/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/fiemap.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/fs.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-RZpVYm
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cace3/fast && make  -f CMakeFiles/cmTC_cace3.dir/build.make CMakeFiles/cmTC_cace3.dir/build
+Building C object CMakeFiles/cmTC_cace3.dir/HAVE_LINUX_FS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_cace3.dir/HAVE_LINUX_FS_H.c.o -MF CMakeFiles/cmTC_cace3.dir/HAVE_LINUX_FS_H.c.o.d -o CMakeFiles/cmTC_cace3.dir/HAVE_LINUX_FS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-RZpVYm/HAVE_LINUX_FS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-RZpVYm/HAVE_LINUX_FS_H.c:11:10: fatal error: 'linux/fs.h' file not found
+#include <linux/fs.h>
+         ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_cace3.dir/HAVE_LINUX_FS_H.c.o] Error 1
+make: *** [cmTC_cace3/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/fs.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_WORKING_FS_IOC_GETFLAGS failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-1qMLFp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6cdbe/fast && make  -f CMakeFiles/cmTC_6cdbe.dir/build.make CMakeFiles/cmTC_6cdbe.dir/build
+Building C object CMakeFiles/cmTC_6cdbe.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_WORKING_FS_IOC_GETFLAGS  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_6cdbe.dir/src.c.o -MF CMakeFiles/cmTC_6cdbe.dir/src.c.o.d -o CMakeFiles/cmTC_6cdbe.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-1qMLFp/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-1qMLFp/src.c:2:10: fatal error: 'linux/fs.h' file not found
+#include <linux/fs.h>
+         ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_6cdbe.dir/src.c.o] Error 1
+make: *** [cmTC_6cdbe/fast] Error 2
+
+
+Source file was:
+#include <sys/ioctl.h>
+#include <linux/fs.h>
+int main(void) { return FS_IOC_GETFLAGS; }
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/magic.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Ct43sy
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_49757/fast && make  -f CMakeFiles/cmTC_49757.dir/build.make CMakeFiles/cmTC_49757.dir/build
+Building C object CMakeFiles/cmTC_49757.dir/HAVE_LINUX_MAGIC_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_49757.dir/HAVE_LINUX_MAGIC_H.c.o -MF CMakeFiles/cmTC_49757.dir/HAVE_LINUX_MAGIC_H.c.o.d -o CMakeFiles/cmTC_49757.dir/HAVE_LINUX_MAGIC_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Ct43sy/HAVE_LINUX_MAGIC_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Ct43sy/HAVE_LINUX_MAGIC_H.c:11:10: fatal error: 'linux/magic.h' file not found
+#include <linux/magic.h>
+         ^~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_49757.dir/HAVE_LINUX_MAGIC_H.c.o] Error 1
+make: *** [cmTC_49757/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/magic.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/extattr.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-191iLp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b1f31/fast && make  -f CMakeFiles/cmTC_b1f31.dir/build.make CMakeFiles/cmTC_b1f31.dir/build
+Building C object CMakeFiles/cmTC_b1f31.dir/HAVE_SYS_EXTATTR_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_b1f31.dir/HAVE_SYS_EXTATTR_H.c.o -MF CMakeFiles/cmTC_b1f31.dir/HAVE_SYS_EXTATTR_H.c.o.d -o CMakeFiles/cmTC_b1f31.dir/HAVE_SYS_EXTATTR_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-191iLp/HAVE_SYS_EXTATTR_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-191iLp/HAVE_SYS_EXTATTR_H.c:28:10: fatal error: 'sys/extattr.h' file not found
+#include <sys/extattr.h>
+         ^~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b1f31.dir/HAVE_SYS_EXTATTR_H.c.o] Error 1
+make: *** [cmTC_b1f31/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/extattr.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mkdev.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lJDQXI
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_78561/fast && make  -f CMakeFiles/cmTC_78561.dir/build.make CMakeFiles/cmTC_78561.dir/build
+Building C object CMakeFiles/cmTC_78561.dir/HAVE_SYS_MKDEV_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_78561.dir/HAVE_SYS_MKDEV_H.c.o -MF CMakeFiles/cmTC_78561.dir/HAVE_SYS_MKDEV_H.c.o.d -o CMakeFiles/cmTC_78561.dir/HAVE_SYS_MKDEV_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lJDQXI/HAVE_SYS_MKDEV_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-lJDQXI/HAVE_SYS_MKDEV_H.c:29:10: fatal error: 'sys/mkdev.h' file not found
+#include <sys/mkdev.h>
+         ^~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_78561.dir/HAVE_SYS_MKDEV_H.c.o] Error 1
+make: *** [cmTC_78561/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mkdev.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/richacl.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-2v8F0G
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1c1fe/fast && make  -f CMakeFiles/cmTC_1c1fe.dir/build.make CMakeFiles/cmTC_1c1fe.dir/build
+Building C object CMakeFiles/cmTC_1c1fe.dir/HAVE_SYS_RICHACL_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_1c1fe.dir/HAVE_SYS_RICHACL_H.c.o -MF CMakeFiles/cmTC_1c1fe.dir/HAVE_SYS_RICHACL_H.c.o.d -o CMakeFiles/cmTC_1c1fe.dir/HAVE_SYS_RICHACL_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-2v8F0G/HAVE_SYS_RICHACL_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-2v8F0G/HAVE_SYS_RICHACL_H.c:32:10: fatal error: 'sys/richacl.h' file not found
+#include <sys/richacl.h>
+         ^~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_1c1fe.dir/HAVE_SYS_RICHACL_H.c.o] Error 1
+make: *** [cmTC_1c1fe/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/richacl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-yZvpny
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_533e6/fast && make  -f CMakeFiles/cmTC_533e6.dir/build.make CMakeFiles/cmTC_533e6.dir/build
+Building C object CMakeFiles/cmTC_533e6.dir/HAVE_SYS_STATFS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_533e6.dir/HAVE_SYS_STATFS_H.c.o -MF CMakeFiles/cmTC_533e6.dir/HAVE_SYS_STATFS_H.c.o.d -o CMakeFiles/cmTC_533e6.dir/HAVE_SYS_STATFS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-yZvpny/HAVE_SYS_STATFS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-yZvpny/HAVE_SYS_STATFS_H.c:34:10: fatal error: 'sys/statfs.h' file not found
+#include <sys/statfs.h>
+         ^~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_533e6.dir/HAVE_SYS_STATFS_H.c.o] Error 1
+make: *** [cmTC_533e6/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/sysmacros.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-JYwzU3
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7e760/fast && make  -f CMakeFiles/cmTC_7e760.dir/build.make CMakeFiles/cmTC_7e760.dir/build
+Building C object CMakeFiles/cmTC_7e760.dir/HAVE_SYS_SYSMACROS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_7e760.dir/HAVE_SYS_SYSMACROS_H.c.o -MF CMakeFiles/cmTC_7e760.dir/HAVE_SYS_SYSMACROS_H.c.o.d -o CMakeFiles/cmTC_7e760.dir/HAVE_SYS_SYSMACROS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-JYwzU3/HAVE_SYS_SYSMACROS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-JYwzU3/HAVE_SYS_SYSMACROS_H.c:35:10: fatal error: 'sys/sysmacros.h' file not found
+#include <sys/sysmacros.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_7e760.dir/HAVE_SYS_SYSMACROS_H.c.o] Error 1
+make: *** [cmTC_7e760/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/sysmacros.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/vfs.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-r3fsOm
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_96841/fast && make  -f CMakeFiles/cmTC_96841.dir/build.make CMakeFiles/cmTC_96841.dir/build
+Building C object CMakeFiles/cmTC_96841.dir/HAVE_SYS_VFS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_96841.dir/HAVE_SYS_VFS_H.c.o -MF CMakeFiles/cmTC_96841.dir/HAVE_SYS_VFS_H.c.o.d -o CMakeFiles/cmTC_96841.dir/HAVE_SYS_VFS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-r3fsOm/HAVE_SYS_VFS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-r3fsOm/HAVE_SYS_VFS_H.c:37:10: fatal error: 'sys/vfs.h' file not found
+#include <sys/vfs.h>
+         ^~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_96841.dir/HAVE_SYS_VFS_H.c.o] Error 1
+make: *** [cmTC_96841/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Oy9xVe
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e1269/fast && make  -f CMakeFiles/cmTC_e1269.dir/build.make CMakeFiles/cmTC_e1269.dir/build
+Building C object CMakeFiles/cmTC_e1269.dir/HAVE_WINDOWS_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_e1269.dir/HAVE_WINDOWS_H.c.o -MF CMakeFiles/cmTC_e1269.dir/HAVE_WINDOWS_H.c.o.d -o CMakeFiles/cmTC_e1269.dir/HAVE_WINDOWS_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Oy9xVe/HAVE_WINDOWS_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Oy9xVe/HAVE_WINDOWS_H.c:44:10: fatal error: 'windows.h' file not found
+#include <windows.h>
+         ^~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_e1269.dir/HAVE_WINDOWS_H.c.o] Error 1
+make: *** [cmTC_e1269/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;wincrypt.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-4Te1sw
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ab157/fast && make  -f CMakeFiles/cmTC_ab157.dir/build.make CMakeFiles/cmTC_ab157.dir/build
+Building C object CMakeFiles/cmTC_ab157.dir/HAVE_WINCRYPT_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_ab157.dir/HAVE_WINCRYPT_H.c.o -MF CMakeFiles/cmTC_ab157.dir/HAVE_WINCRYPT_H.c.o.d -o CMakeFiles/cmTC_ab157.dir/HAVE_WINCRYPT_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-4Te1sw/HAVE_WINCRYPT_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-4Te1sw/HAVE_WINCRYPT_H.c:44:10: fatal error: 'wincrypt.h' file not found
+#include <wincrypt.h>
+         ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_ab157.dir/HAVE_WINCRYPT_H.c.o] Error 1
+make: *** [cmTC_ab157/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <wincrypt.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;copyfile.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;locale.h;membership.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statvfs.h;sys/time.h;sys/utsname.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;winioctl.h exist failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-LoHxSO
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3a7dc/fast && make  -f CMakeFiles/cmTC_3a7dc.dir/build.make CMakeFiles/cmTC_3a7dc.dir/build
+Building C object CMakeFiles/cmTC_3a7dc.dir/HAVE_WINIOCTL_H.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_3a7dc.dir/HAVE_WINIOCTL_H.c.o -MF CMakeFiles/cmTC_3a7dc.dir/HAVE_WINIOCTL_H.c.o.d -o CMakeFiles/cmTC_3a7dc.dir/HAVE_WINIOCTL_H.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-LoHxSO/HAVE_WINIOCTL_H.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-LoHxSO/HAVE_WINIOCTL_H.c:44:10: fatal error: 'winioctl.h' file not found
+#include <winioctl.h>
+         ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_3a7dc.dir/HAVE_WINIOCTL_H.c.o] Error 1
+make: *** [cmTC_3a7dc/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <locale.h>
+#include <membership.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statvfs.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <winioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if the function MD5Init exists in the md failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-FbKLpT
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6d5ef/fast && make  -f CMakeFiles/cmTC_6d5ef.dir/build.make CMakeFiles/cmTC_6d5ef.dir/build
+Building C object CMakeFiles/cmTC_6d5ef.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=MD5Init -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_6d5ef.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_6d5ef.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_6d5ef.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-FbKLpT/CheckFunctionExists.c
+Linking C executable cmTC_6d5ef
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_6d5ef.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=MD5Init -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6d5ef.dir/CheckFunctionExists.c.o -o cmTC_6d5ef  -lmd 
+ld: library not found for -lmd
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_6d5ef] Error 1
+make: *** [cmTC_6d5ef/fast] Error 2
+
+
+
+Determining if the function futimesat exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-PPCyNz
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2c59e/fast && make  -f CMakeFiles/cmTC_2c59e.dir/build.make CMakeFiles/cmTC_2c59e.dir/build
+Building C object CMakeFiles/cmTC_2c59e.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=futimesat -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_2c59e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_2c59e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_2c59e.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-PPCyNz/CheckFunctionExists.c
+Linking C executable cmTC_2c59e
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_2c59e.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=futimesat -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2c59e.dir/CheckFunctionExists.c.o -o cmTC_2c59e 
+Undefined symbols for architecture arm64:
+  "_futimesat", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_2c59e] Error 1
+make: *** [cmTC_2c59e/fast] Error 2
+
+
+
+Determining if the function strncpy_s exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-zWwjrx
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d604f/fast && make  -f CMakeFiles/cmTC_d604f.dir/build.make CMakeFiles/cmTC_d604f.dir/build
+Building C object CMakeFiles/cmTC_d604f.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=strncpy_s -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d604f.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_d604f.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_d604f.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-zWwjrx/CheckFunctionExists.c
+Linking C executable cmTC_d604f
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_d604f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=strncpy_s -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d604f.dir/CheckFunctionExists.c.o -o cmTC_d604f 
+Undefined symbols for architecture arm64:
+  "_strncpy_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_d604f] Error 1
+make: *** [cmTC_d604f/fast] Error 2
+
+
+
+Determining if the function _ctime64_s exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-5zgvH0
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a70b1/fast && make  -f CMakeFiles/cmTC_a70b1.dir/build.make CMakeFiles/cmTC_a70b1.dir/build
+Building C object CMakeFiles/cmTC_a70b1.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=_ctime64_s -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_a70b1.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_a70b1.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_a70b1.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-5zgvH0/CheckFunctionExists.c
+Linking C executable cmTC_a70b1
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_a70b1.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=_ctime64_s -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a70b1.dir/CheckFunctionExists.c.o -o cmTC_a70b1 
+Undefined symbols for architecture arm64:
+  "__ctime64_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_a70b1] Error 1
+make: *** [cmTC_a70b1/fast] Error 2
+
+
+
+Determining if the function _fseeki64 exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-8XMldo
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c9092/fast && make  -f CMakeFiles/cmTC_c9092.dir/build.make CMakeFiles/cmTC_c9092.dir/build
+Building C object CMakeFiles/cmTC_c9092.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=_fseeki64 -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_c9092.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_c9092.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_c9092.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-8XMldo/CheckFunctionExists.c
+Linking C executable cmTC_c9092
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_c9092.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=_fseeki64 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c9092.dir/CheckFunctionExists.c.o -o cmTC_c9092 
+Undefined symbols for architecture arm64:
+  "__fseeki64", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_c9092] Error 1
+make: *** [cmTC_c9092/fast] Error 2
+
+
+
+Determining if the function _get_timezone exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-sH3523
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f65d8/fast && make  -f CMakeFiles/cmTC_f65d8.dir/build.make CMakeFiles/cmTC_f65d8.dir/build
+Building C object CMakeFiles/cmTC_f65d8.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=_get_timezone -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_f65d8.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_f65d8.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_f65d8.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-sH3523/CheckFunctionExists.c
+Linking C executable cmTC_f65d8
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_f65d8.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=_get_timezone -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f65d8.dir/CheckFunctionExists.c.o -o cmTC_f65d8 
+Undefined symbols for architecture arm64:
+  "__get_timezone", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_f65d8] Error 1
+make: *** [cmTC_f65d8/fast] Error 2
+
+
+
+Determining if the function _gmtime64_s exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-HlZaDY
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_83368/fast && make  -f CMakeFiles/cmTC_83368.dir/build.make CMakeFiles/cmTC_83368.dir/build
+Building C object CMakeFiles/cmTC_83368.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=_gmtime64_s -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_83368.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_83368.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_83368.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-HlZaDY/CheckFunctionExists.c
+Linking C executable cmTC_83368
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_83368.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=_gmtime64_s -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_83368.dir/CheckFunctionExists.c.o -o cmTC_83368 
+Undefined symbols for architecture arm64:
+  "__gmtime64_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_83368] Error 1
+make: *** [cmTC_83368/fast] Error 2
+
+
+
+Determining if the function _localtime64_s exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-n8kFpG
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_591f7/fast && make  -f CMakeFiles/cmTC_591f7.dir/build.make CMakeFiles/cmTC_591f7.dir/build
+Building C object CMakeFiles/cmTC_591f7.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=_localtime64_s -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_591f7.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_591f7.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_591f7.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-n8kFpG/CheckFunctionExists.c
+Linking C executable cmTC_591f7
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_591f7.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=_localtime64_s -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_591f7.dir/CheckFunctionExists.c.o -o cmTC_591f7 
+Undefined symbols for architecture arm64:
+  "__localtime64_s", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_591f7] Error 1
+make: *** [cmTC_591f7/fast] Error 2
+
+
+
+Determining if the function _mkgmtime64 exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-beTcnP
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_12f67/fast && make  -f CMakeFiles/cmTC_12f67.dir/build.make CMakeFiles/cmTC_12f67.dir/build
+Building C object CMakeFiles/cmTC_12f67.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64 -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_12f67.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_12f67.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_12f67.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-beTcnP/CheckFunctionExists.c
+Linking C executable cmTC_12f67
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_12f67.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_12f67.dir/CheckFunctionExists.c.o -o cmTC_12f67 
+Undefined symbols for architecture arm64:
+  "__mkgmtime64", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_12f67] Error 1
+make: *** [cmTC_12f67/fast] Error 2
+
+
+
+Determining if the function cygwin_conv_path exists failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-6sHfk1
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a8e56/fast && make  -f CMakeFiles/cmTC_a8e56.dir/build.make CMakeFiles/cmTC_a8e56.dir/build
+Building C object CMakeFiles/cmTC_a8e56.dir/CheckFunctionExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang   -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_a8e56.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_a8e56.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_a8e56.dir/CheckFunctionExists.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-6sHfk1/CheckFunctionExists.c
+Linking C executable cmTC_a8e56
+/Users/shane/env_setting/CMake/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_a8e56.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/clang  -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a8e56.dir/CheckFunctionExists.c.o -o cmTC_a8e56 
+Undefined symbols for architecture arm64:
+  "_cygwin_conv_path", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_a8e56] Error 1
+make: *** [cmTC_a8e56/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_XVFSCONF failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-HcT37X
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f752f/fast && make  -f CMakeFiles/cmTC_f752f.dir/build.make CMakeFiles/cmTC_f752f.dir/build
+Building C object CMakeFiles/cmTC_f752f.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_XVFSCONF  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_f752f.dir/src.c.o -MF CMakeFiles/cmTC_f752f.dir/src.c.o.d -o CMakeFiles/cmTC_f752f.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-HcT37X/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-HcT37X/src.c:3:34: error: variable has incomplete type 'struct xvfsconf'
+int main(void) { struct xvfsconf v; return sizeof(v);}
+                                 ^
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-HcT37X/src.c:3:25: note: forward declaration of 'struct xvfsconf'
+int main(void) { struct xvfsconf v; return sizeof(v);}
+                        ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_f752f.dir/src.c.o] Error 1
+make: *** [cmTC_f752f/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+#include <sys/mount.h>
+int main(void) { struct xvfsconf v; return sizeof(v);}
+
+Performing C SOURCE FILE Test MAJOR_IN_MKDEV failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-6LE9CE
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fcc33/fast && make  -f CMakeFiles/cmTC_fcc33.dir/build.make CMakeFiles/cmTC_fcc33.dir/build
+Building C object CMakeFiles/cmTC_fcc33.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DMAJOR_IN_MKDEV  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_fcc33.dir/src.c.o -MF CMakeFiles/cmTC_fcc33.dir/src.c.o.d -o CMakeFiles/cmTC_fcc33.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-6LE9CE/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-6LE9CE/src.c:1:10: fatal error: 'sys/mkdev.h' file not found
+#include <sys/mkdev.h>
+         ^~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_fcc33.dir/src.c.o] Error 1
+make: *** [cmTC_fcc33/fast] Error 2
+
+
+Source file was:
+#include <sys/mkdev.h>
+int main() { return major(256); }
+
+Performing C SOURCE FILE Test MAJOR_IN_SYSMACROS failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-A0hPmG
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_18636/fast && make  -f CMakeFiles/cmTC_18636.dir/build.make CMakeFiles/cmTC_18636.dir/build
+Building C object CMakeFiles/cmTC_18636.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DMAJOR_IN_SYSMACROS  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_18636.dir/src.c.o -MF CMakeFiles/cmTC_18636.dir/src.c.o.d -o CMakeFiles/cmTC_18636.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-A0hPmG/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-A0hPmG/src.c:1:10: fatal error: 'sys/sysmacros.h' file not found
+#include <sys/sysmacros.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_18636.dir/src.c.o] Error 1
+make: *** [cmTC_18636/fast] Error 2
+
+
+Source file was:
+#include <sys/sysmacros.h>
+int main() { return major(256); }
+
+Performing C SOURCE FILE Test HAVE_STRUCT_TM___TM_GMTOFF failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-s5OUGr
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ea4d2/fast && make  -f CMakeFiles/cmTC_ea4d2.dir/build.make CMakeFiles/cmTC_ea4d2.dir/build
+Building C object CMakeFiles/cmTC_ea4d2.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_TM___TM_GMTOFF  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_ea4d2.dir/src.c.o -MF CMakeFiles/cmTC_ea4d2.dir/src.c.o.d -o CMakeFiles/cmTC_ea4d2.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-s5OUGr/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-s5OUGr/src.c:6:34: error: no member named '__tm_gmtoff' in 'struct tm'; did you mean 'tm_gmtoff'?
+  (void)sizeof(((struct tm *)0)->__tm_gmtoff);
+                                 ^~~~~~~~~~~
+                                 tm_gmtoff
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/time.h:85:7: note: 'tm_gmtoff' declared here
+        long    tm_gmtoff;      /* offset from UTC in seconds */
+                ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_ea4d2.dir/src.c.o] Error 1
+make: *** [cmTC_ea4d2/fast] Error 2
+
+
+Source file was:
+
+#include <time.h>
+
+int main()
+{
+  (void)sizeof(((struct tm *)0)->__tm_gmtoff);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATFS_F_NAMEMAX failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-SF7Bmj
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6dbd4/fast && make  -f CMakeFiles/cmTC_6dbd4.dir/build.make CMakeFiles/cmTC_6dbd4.dir/build
+Building C object CMakeFiles/cmTC_6dbd4.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_STATFS_F_NAMEMAX  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_6dbd4.dir/src.c.o -MF CMakeFiles/cmTC_6dbd4.dir/src.c.o.d -o CMakeFiles/cmTC_6dbd4.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-SF7Bmj/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-SF7Bmj/src.c:7:38: error: no member named 'f_namemax' in 'struct statfs'
+  (void)sizeof(((struct statfs *)0)->f_namemax);
+               ~~~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_6dbd4.dir/src.c.o] Error 1
+make: *** [cmTC_6dbd4/fast] Error 2
+
+
+Source file was:
+
+#include <sys/param.h>
+#include <sys/mount.h>
+
+int main()
+{
+  (void)sizeof(((struct statfs *)0)->f_namemax);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-13mhLx
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_91850/fast && make  -f CMakeFiles/cmTC_91850.dir/build.make CMakeFiles/cmTC_91850.dir/build
+Building C object CMakeFiles/cmTC_91850.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_STAT_ST_MTIM_TV_NSEC  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_91850.dir/src.c.o -MF CMakeFiles/cmTC_91850.dir/src.c.o.d -o CMakeFiles/cmTC_91850.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-13mhLx/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-13mhLx/src.c:7:36: error: no member named 'st_mtim' in 'struct stat'
+  (void)sizeof(((struct stat *)0)->st_mtim.tv_nsec);
+               ~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_91850.dir/src.c.o] Error 1
+make: *** [cmTC_91850/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtim.tv_nsec);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_N failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-QL0tni
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d243e/fast && make  -f CMakeFiles/cmTC_d243e.dir/build.make CMakeFiles/cmTC_d243e.dir/build
+Building C object CMakeFiles/cmTC_d243e.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_STAT_ST_MTIME_N  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d243e.dir/src.c.o -MF CMakeFiles/cmTC_d243e.dir/src.c.o.d -o CMakeFiles/cmTC_d243e.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-QL0tni/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-QL0tni/src.c:7:36: error: no member named 'st_mtime_n' in 'struct stat'
+  (void)sizeof(((struct stat *)0)->st_mtime_n);
+               ~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_d243e.dir/src.c.o] Error 1
+make: *** [cmTC_d243e/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_n);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_UMTIME failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-eppsrc
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_360fd/fast && make  -f CMakeFiles/cmTC_360fd.dir/build.make CMakeFiles/cmTC_360fd.dir/build
+Building C object CMakeFiles/cmTC_360fd.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_STAT_ST_UMTIME  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_360fd.dir/src.c.o -MF CMakeFiles/cmTC_360fd.dir/src.c.o.d -o CMakeFiles/cmTC_360fd.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-eppsrc/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-eppsrc/src.c:7:36: error: no member named 'st_umtime' in 'struct stat'
+  (void)sizeof(((struct stat *)0)->st_umtime);
+               ~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_360fd.dir/src.c.o] Error 1
+make: *** [cmTC_360fd/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_umtime);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_USEC failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Y8Ood3
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_73a7b/fast && make  -f CMakeFiles/cmTC_73a7b.dir/build.make CMakeFiles/cmTC_73a7b.dir/build
+Building C object CMakeFiles/cmTC_73a7b.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_STAT_ST_MTIME_USEC  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_73a7b.dir/src.c.o -MF CMakeFiles/cmTC_73a7b.dir/src.c.o.d -o CMakeFiles/cmTC_73a7b.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Y8Ood3/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-Y8Ood3/src.c:7:36: error: no member named 'st_mtime_usec' in 'struct stat'; did you mean 'st_mtimespec'?
+  (void)sizeof(((struct stat *)0)->st_mtime_usec);
+                                   ^~~~~~~~~~~~~
+                                   st_mtimespec
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/stat.h:182:13: note: 'st_mtimespec' declared here
+struct stat __DARWIN_STRUCT_STAT64;
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/stat.h:166:2: note: expanded from macro '__DARWIN_STRUCT_STAT64'
+        __DARWIN_STRUCT_STAT64_TIMES \
+        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/sys/stat.h:130:18: note: expanded from macro '__DARWIN_STRUCT_STAT64_TIMES'
+        struct timespec st_mtimespec;           /* time of last data modification */ \
+                        ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_73a7b.dir/src.c.o] Error 1
+make: *** [cmTC_73a7b/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_usec);
+  return 0;
+}
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATVFS_F_IOSIZE failed with the following output:
+Change Dir: /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-EPBSXr
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d03a7/fast && make  -f CMakeFiles/cmTC_d03a7.dir/build.make CMakeFiles/cmTC_d03a7.dir/build
+Building C object CMakeFiles/cmTC_d03a7.dir/src.c.o
+/Library/Developer/CommandLineTools/usr/bin/clang -DHAVE_STRUCT_STATVFS_F_IOSIZE  -w  -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -MD -MT CMakeFiles/cmTC_d03a7.dir/src.c.o -MF CMakeFiles/cmTC_d03a7.dir/src.c.o.d -o CMakeFiles/cmTC_d03a7.dir/src.c.o -c /Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-EPBSXr/src.c
+/Users/shane/env_setting/CMake/CMakeFiles/CMakeScratch/TryCompile-EPBSXr/src.c:7:39: error: no member named 'f_iosize' in 'struct statvfs'
+  (void)sizeof(((struct statvfs *)0)->f_iosize);
+               ~~~~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_d03a7.dir/src.c.o] Error 1
+make: *** [cmTC_d03a7/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/statvfs.h>
+
+int main()
+{
+  (void)sizeof(((struct statvfs *)0)->f_iosize);
+  return 0;
+}
+
+
+Looking for a Fortran compiler failed with the following output:
+-- The Fortran compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_Fortran_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "FC" or the CMake cache entry CMAKE_Fortran_COMPILER to the full
+  path to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/shane/env_setting/CMake/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeOutput.log".
+See also "/Users/shane/env_setting/CMake/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeError.log".
+

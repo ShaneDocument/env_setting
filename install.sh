@@ -1,57 +1,39 @@
 #!/bin/bash
 # Program:
-#   This program will build the cscope DataBase in specify folder.
-#   Input: Root folder of C Project
-#   Output: None
+#   This program will install the most of the envirnment settings
 
-
-PROJECT_ROOT=$1
-CSCOPE_FLAGS=$2
-
-# Check PROJECT_ROOT is folder or not
-if [ -d "${PROJECT_ROOT}" ] ; then
-    :
-else
-    if [ -f "${PROJECT_ROOT}" ] ; then
-        echo "**** [Error 1]${PROJECT_ROOT} is a file. Need a directory. ****"
-        exit 1
-    else
-        echo "**** [Error 2]${PROJECT_ROOT} is not valid. ****"
-        exit 2
-    fi
+read -rsp $'This install script will delete your .vim, .vimrc and .tmux.conf. Press y to continue....\n' -n1 READ
+if [ "$READ" != 'y' ]; then
+    echo "**** STOP do this. ****"
+    exit 1
 fi
+cp -r ./.vim $HOME
+cp -r ./.vimrc $HOME
+cp -r ./.tmux.conf $HOME
 
-# Rewrite the Path to absolute
-PROJECT_ROOT="$(cd "$(dirname "${PROJECT_ROOT}")" && pwd)/$(basename "${PROJECT_ROOT}")"
+# Install Python
+cd Python-3.11.1 
+./configure --prefix=$HOME/python --enable-optimizations --enable-shared
+make -j 8
+make install -j 8
+cd ..
+ls
+C_INCLUDE_PATH=$HOME/Python/include/python3.11
+export C_INCLUDE_PATH
 
-# Check cscope.files size (means the C and headers are exist or not)
-find ${PROJECT_ROOT} -name "*.c" -o -name "*.h" > ./tmp
+PATH=$HOME/Python/bin:${PATH}
+export PATH
+# Install CMake
+cd CMake
+./bootstrap --prefix=$HOME/CMake
+make -j 8
+make install -j 8
+cd ..
+ls
+PATH=$HOME/CMake/bin:${PATH}
+export PATH
 
-# Check size of cscope.files
-file_num=$(wc -l < ./tmp)
-if [ ${file_num} -eq 0 ]; then
-    echo "**** [Error 3] No C or header files in ${PROJECT_ROOT} ****"
-    rm ./tmp
-    exit 3
-fi
 
-# Generate cscope.files
-$(cat ./tmp > ${PROJECT_ROOT}/cscope.files)
-rm ./tmp
-if [ -f "${PROJECT_ROOT}/cscope.files" ]; then
-    :
-else
-    echo "**** [Error 4] Create cscope.files failed. ****"
-    exit 4
-fi
-echo "***** ${file_num} files in this project. \(C and headers\) *****"
-
-# Generate cscope databases and check them
-$(cd ${PROJECT_ROOT} && cscope -Rbqk -i ${PROJECT_ROOT}/cscope.files)
-if [ -f "${PROJECT_ROOT}/cscope.out" ]; then
-    :
-else
-    echo "**** [Error 5] Create cscope database failed. ****"
-    exit 5
-fi
-exit 0
+#Install YCM
+cd $HOME/.vim/bundle/YouCompleteMe
+python3 install.py --clang-completer

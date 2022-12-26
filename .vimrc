@@ -77,9 +77,11 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " buffer in the NERDTree window.  With the <path> argument, find and
 " reveal the specified path.
 
-" Leader + set + NERDTree
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" Shift + i can toggle this setting.
 let NERDTreeShowHidden=1
+
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " Close the tab if NERDTree is the only window remaining in it.
@@ -87,3 +89,8 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+
+
+let g:ycm_global_ycm_extra_conf = '--clang-completer'
+let g:ycm_enable_diagnostic_highlighting = 1
+inoremap <C-Space> <C-x><C-o>

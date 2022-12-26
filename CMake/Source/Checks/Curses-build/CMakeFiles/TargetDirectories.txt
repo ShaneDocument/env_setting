@@ -1,0 +1,3 @@
+/Users/shane/env_setting/CMake/Source/Checks/Curses-build/CMakeFiles/CheckCurses.dir
+/Users/shane/env_setting/CMake/Source/Checks/Curses-build/CMakeFiles/edit_cache.dir
+/Users/shane/env_setting/CMake/Source/Checks/Curses-build/CMakeFiles/rebuild_cache.dir

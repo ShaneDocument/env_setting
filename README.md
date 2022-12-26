@@ -11,7 +11,7 @@ This is a basic setting for vim and others.
 
 * vim - one-half (dark for default) without Italic font
 * tmux - tmux-power
-
+    * It's necessary to update tmux to latest version
 ## Install
 
 1. copy .vimrc, .vim,  .tmux.conf, .tmux_theme to $HOME folder
