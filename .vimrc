@@ -1,4 +1,4 @@
-" Color theme
+" ******* Color theme *******
 set t_Co=256
 set term=screen-256color
 set cursorline
@@ -39,12 +39,9 @@ function! ToggleMouse()
     endif
 endfunction
 nnoremap <leader>sm :call ToggleMouse()<cr>
-" Buffer switch
-:nmap <TAB> :bnext<CR>
-:nmap <S-TAB> :bprev<CR>
-:nmap <leader>sb :buffers<CR>
-" close buffer
-:nmap <leader>bc :bd<CR>
+" Tab switch
+:nmap <TAB> :tabn<CR>
+:nmap <S-TAB> :tabp<CR>
 
 " window switch
 :nmap <leader>h :wincmd h<CR>
@@ -65,9 +62,9 @@ source ~/env_setting/config/.cscope_config
 " Plugins
 :set rtp+=~/.vim/bundle/nerdtree
 :set rtp+=~/.vim/bundle/YouCompleteMe
-:source ~/.vim/bundle/vim-buftabline/plugin/buftabline.vim
+:set rtp+=~/.vim/bundle/vim-airline
 
-" NERDTree Setting
+" ****** NERDTree Setting ******
 
 " Opens (or reopens) the NERDTree if it is not currently visible;
 " otherwise, the cursor is moved to the already-open NERDTree.
@@ -82,6 +79,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 " Shift + i can toggle this setting.
 let NERDTreeShowHidden=1
+let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -92,6 +90,44 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 
-let g:ycm_global_ycm_extra_conf = '--clang-completer'
+" ****** YCM Setting ******
+
+let g:ycm_python_binary_path='Users/shane/python/bin/python3'
+let g:ycm_global_ycm_extra_conf = "/Users/shane/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py"
 let g:ycm_enable_diagnostic_highlighting = 1
 inoremap <C-Space> <C-x><C-o>
+
+" ****** Airline Setting ******
+set noshowmode
+let g:airline_mode_map = {
+    \ '__'     : '-',
+    \ 'c'      : 'C',
+    \ 'i'      : 'I',
+    \ 'ic'     : 'I',
+    \ 'ix'     : 'I',
+    \ 'n'      : 'N',
+    \ 'multi'  : 'M',
+    \ 'ni'     : 'N',
+    \ 'no'     : 'N',
+    \ 'R'      : 'R',
+    \ 'Rv'     : 'R',
+    \ 's'      : 'S',
+    \ 'S'      : 'S',
+    \ ''     : 'S',
+    \ 't'      : 'T',
+    \ 'v'      : 'V',
+    \ 'V'      : 'V',
+    \ ''     : 'V',
+    \ }
+
+" ******* Other setting *******
+
+" Let the backspace work fine
+set backspace=indent,eol,start
+
+" When open a file, set the cursor at the line same as last time.
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+      \| exe "normal! g'\"" | endif
+endif
+:set spell spelllang=en_us

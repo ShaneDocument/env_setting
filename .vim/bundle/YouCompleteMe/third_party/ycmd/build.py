@@ -357,6 +357,8 @@ def GetPossiblePythonLibraryDirectories():
 
 def FindPythonLibraries():
   include_dir = sysconfig.get_config_var( 'INCLUDEPY' )
+  print(include_dir)
+
   if not p.isfile( p.join( include_dir, 'Python.h' ) ):
     raise InstallationFailed(
       NO_PYTHON_HEADERS_ERROR.format( include_dir = include_dir ) )
@@ -423,7 +425,8 @@ def CustomPythonCmakeArgs( args ):
   if not args.quiet:
     print( f'Found Python library: { python_library }' )
     print( f'Found Python headers folder: { python_include }' )
-
+  print(python_library)
+  input("stop")
   return [
     f'-DPython3_LIBRARY={ python_library }',
     f'-DPython3_EXECUTABLE={ sys.executable }',

@@ -12,6 +12,7 @@ PATH=$HOME/CMake/bin:$HOME/python/bin:${PATH}
 export PATH
 # Install vim
 cd vim 
-./configure --prefix=$HOME/vim --enable-python3interp
+python_cfg=$(find $HOME/python -name python3.pc)
+./configure --prefix=$HOME/vim --enable-python3interp --with-python3-config-dir=${python_cfg}
 make -j 8
 make install -j 8
