@@ -61,8 +61,15 @@ source ~/env_setting/config/.cscope_config
 
 " Plugins
 :set rtp+=~/.vim/bundle/nerdtree
-:set rtp+=~/.vim/bundle/YouCompleteMe
+:set rtp+=~/.vim/bundle/vim-clang-format
+":set rtp+=~/.vim/bundle/YouCompleteMe
 :set rtp+=~/.vim/bundle/vim-airline
+:set rtp+=~/.vim/bundle/supertab
+
+" ****** supertab Setting ******
+
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 
 " ****** NERDTree Setting ******
 
@@ -131,3 +138,5 @@ if has("autocmd")
       \| exe "normal! g'\"" | endif
 endif
 :set spell spelllang=en_us
+hi clear SpellBad
+hi SpellBad cterm=underline,bold
